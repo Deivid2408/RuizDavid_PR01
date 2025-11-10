@@ -11,17 +11,17 @@ public class PhysicMaterialDetect : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        startingDrag = rb.drag;
+        startingDrag = rb.linearDamping;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (rb != null && collision.gameObject.GetComponent<Collider>().sharedMaterial != null)
         {
-            //Obtenemos la fricción en movimiento de la superficie que tocamos
+            //Obtenemos la fricciï¿½n en movimiento de la superficie que tocamos
             float dynamicFrition = collision.gameObject.GetComponent<Collider>().sharedMaterial.dynamicFriction;
-            //Cambiamos nuestra resistencia al airen función de la fricción
-            rb.drag = startingDrag + dynamicFrition;
+            //Cambiamos nuestra resistencia al airen funciï¿½n de la fricciï¿½n
+            rb.linearDamping = startingDrag + dynamicFrition;
         }
     }
 
@@ -29,8 +29,8 @@ public class PhysicMaterialDetect : MonoBehaviour
     {
         if (rb != null && collision.gameObject.GetComponent<Collider>().sharedMaterial != null)
         {
-            //Cambiamos nuestra resistencia al airen función de la fricción
-            rb.drag = startingDrag;
+            //Cambiamos nuestra resistencia al airen funciï¿½n de la fricciï¿½n
+            rb.linearDamping = startingDrag;
         }
     }
 

@@ -24,14 +24,19 @@ public class MovimientoBola : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        
+        Rotacion();
+        rb.AddForce(push * moveforce);
     }
 
     void Move()
     {
         rb.AddForce(push * moveforce);
-        rb.AddTorque(push * torqueforce);
+       
 
     }
    
+    void Rotacion()
+    {
+        rb.AddTorque(push * torqueforce);
+    }
 }
