@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.UIElements;
@@ -5,12 +6,14 @@ using UnityEngine.UIElements;
 public class MovimientoBola : MonoBehaviour
 {
     Rigidbody rb;
-    Vector3 push = Vector3.forward;
+    
 
-    float moveforce = 50f;
-    float torqueforce = 20f;
+    float moveforce = 10f;
+    float torqueforce = 5f;
 
-    [SerializeField] float thrust = 20f;
+    float moveZ;
+    float moveX;
+
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,19 +27,21 @@ public class MovimientoBola : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        Rotacion();
-        rb.AddForce(push * moveforce);
     }
 
     void Move()
     {
-        rb.AddForce(push * moveforce);
-       
+        moveX = Input.GetAxis("Horizontal");
+        moveZ = Input.GetAxis("Vertical");
+
+
+
+       Vector3 direction = new Vector3(moveX, 0, moveZ);
+       rb.AddForce(direction * moveforce);
+       rb.AddTorque(direction * torqueforce);
+
 
     }
    
-    void Rotacion()
-    {
-        rb.AddTorque(push * torqueforce);
-    }
+   
 }
