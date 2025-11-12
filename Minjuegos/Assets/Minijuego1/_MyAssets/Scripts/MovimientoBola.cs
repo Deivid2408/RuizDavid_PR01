@@ -14,6 +14,8 @@ public class MovimientoBola : MonoBehaviour
     float moveZ;
     float moveX;
 
+    Vector3 empujeZ = Vector3.forward;
+
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,12 +29,13 @@ public class MovimientoBola : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        Empuje();
     }
 
     void Move()
     {
         moveX = Input.GetAxis("Horizontal");
-        moveZ = Input.GetAxis("Vertical");
+       
 
 
 
@@ -43,5 +46,9 @@ public class MovimientoBola : MonoBehaviour
 
     }
    
-   
+   void Empuje()
+    {
+        float moveZ = Input.GetAxis("Vertical");
+        rb.AddForce(empujeZ * moveZ * moveforce);
+    }
 }
