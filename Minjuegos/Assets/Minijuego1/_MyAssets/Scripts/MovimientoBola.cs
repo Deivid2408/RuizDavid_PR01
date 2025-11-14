@@ -1,54 +1,42 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
-using UnityEngine.UIElements;
 
 public class MovimientoBola : MonoBehaviour
 {
     Rigidbody rb;
     
-
-    float moveforce = 10f;
-    float torqueforce = 5f;
-
-    float moveZ;
-    float moveX;
+    [SerializeField] float fuerzaEmpuje;
+    [SerializeField] float fuerzaTorsion;
 
     Vector3 empujeZ = Vector3.forward;
-
-   
+    Vector3 empujeX = Vector3.right;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        fuerzaTorsion = 0f;
+        fuerzaEmpuje = 9.5f;
+
         rb = GetComponent<Rigidbody>();
-
-
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
-        Move();
+        Rotacion();
         Empuje();
     }
-
-    void Move()
+    void Empuje()
     {
-        moveX = Input.GetAxis("Horizontal");
-       
 
-
-
-       Vector3 direction = new Vector3(moveX, 0, moveZ);
-       rb.AddForce(direction * moveforce);
-       rb.AddTorque(direction * torqueforce);
-
-
-    }
-   
-   void Empuje()
-    {
         float moveZ = Input.GetAxis("Vertical");
-        rb.AddForce(empujeZ * moveZ * moveforce);
+        float moveX = Input.GetAxis("Horizontal");
+        rb.AddForce(empujeZ * moveZ * fuerzaEmpuje);
+        rb.AddForce(empujeX * moveX * fuerzaEmpuje);
     }
+    void Rotacion()
+    {
+
+        float rotacion = Input.GetAxis("Horizontal2");
+        rb.AddTorque(Vector3.forward * rotacion * fuerzaTorsion);
+        rb.AddTorque(Vector3.right * rotacion * fuerzaTorsion);
+    }
+
+
 }

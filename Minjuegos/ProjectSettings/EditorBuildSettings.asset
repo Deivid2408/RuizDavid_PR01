@@ -4,7 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 80209f7269c8cbf4bab7fc79d56d2c8c
+  - enabled: 1
+    path: Assets/Scenes/RuizDavid_Minijuego1.unity
+    guid: 9e8a6195d047b8749b9358ba3dbb4aaf
+  - enabled: 1
+    path: Assets/Scenes/RuizDavid_Minijuego2.unity
+    guid: 36ff8886b10e8b1438422581a967d159
+  - enabled: 1
+    path: Assets/Scenes/RuizDavid_Minijuego3.unity
+    guid: 1b5ef3c89294ac248a97ae79f49f1108
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
