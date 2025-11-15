@@ -1,18 +1,21 @@
 using UnityEngine;
 
-public class MovimientoCanasta : MonoBehaviour
+public class MovimientoCesto : MonoBehaviour
 {
 
     float velocidad = 15f;
     float limiteDerecha = 28f;
     float limiteIzquierda = -28f;
 
+    public ContadorVidas contadorVidas;
+
     //1 = derecha, -1 = izquierda
     float direccion = 1f; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //Referencia al script ContadorVidas. Es decir, que busque el script en la escena.
+        contadorVidas = FindAnyObjectByType<ContadorVidas>();
     }
 
     // Update is called once per frame
@@ -33,13 +36,21 @@ public class MovimientoCanasta : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Bola") ;
+        if (other.CompareTag("Bola"))
         {
             print("Has ganado");
+            Acierto();
 
         }
         
     }
+
+    public void Acierto()
+    {
+        contadorVidas.ContadorAciertos();
+
+    }
+
 }
