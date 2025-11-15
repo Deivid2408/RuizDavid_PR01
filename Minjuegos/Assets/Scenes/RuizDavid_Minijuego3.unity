@@ -439,6 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626902508}
   - component: {fileID: 626902507}
+  - component: {fileID: 626902509}
   m_Layer: 0
   m_Name: Precipicio
   m_TagString: Untagged
@@ -482,6 +483,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &626902509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626902506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a50abc28fe05640458c71413c8cf0c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &647957655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,6 +836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 928822571}
+  - component: {fileID: 928822572}
   m_Layer: 0
   m_Name: EmptyBola
   m_TagString: Untagged
@@ -846,6 +860,33 @@ Transform:
   - {fileID: 283961239295620383}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &928822572
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928822570}
+  serializedVersion: 4
+  m_Mass: 2
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &933630321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2061,6 +2102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5360388057639236378}
   - component: {fileID: 5360388057639236379}
+  - component: {fileID: 5360388057639236380}
   m_Layer: 0
   m_Name: TerrenoMinijuego3
   m_TagString: Untagged
@@ -2111,6 +2153,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!114 &5360388057639236380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695068741873265056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f3e026f881c2143a4a39f2b7bea66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuerzaRotacion: 50
 --- !u!4 &6085174734715520283
 Transform:
   m_ObjectHideFlags: 0
