@@ -204,13 +204,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15945529}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.21422368, y: -0, z: -0, w: 0.97678465}
+  m_LocalPosition: {x: 0.57, y: 2.4, z: -5.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.74, y: 0, z: 0}
 --- !u!1001 &321824169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2103,6 +2103,7 @@ GameObject:
   - component: {fileID: 5360388057639236378}
   - component: {fileID: 5360388057639236379}
   - component: {fileID: 5360388057639236380}
+  - component: {fileID: 5360388057639236381}
   m_Layer: 0
   m_Name: TerrenoMinijuego3
   m_TagString: Untagged
@@ -2134,9 +2135,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4695068741873265056}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2166,6 +2167,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerzaRotacion: 50
+--- !u!114 &5360388057639236381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695068741873265056}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165a1e369ad74cd468c0dbc49c80562f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6085174734715520283
 Transform:
   m_ObjectHideFlags: 0

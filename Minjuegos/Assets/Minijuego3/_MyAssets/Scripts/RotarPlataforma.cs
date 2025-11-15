@@ -3,7 +3,7 @@ using UnityEngine;
 public class RotarPlataforma : MonoBehaviour
 {
     // Qué tan fuerte gira la plataforma
-    public float fuerzaRotacion = 3f;   
+    public float fuerzaRotacion = 1f;   
 
     private Rigidbody rb;
 
