@@ -25,7 +25,7 @@ public class MovPlataformaFila2y4 : MonoBehaviour
     void Rotacion()
     {
         //Esto será mi movimiento de mi joystick 
-        float rotacion = Input.GetAxis("Horizontal3");
-        rb.AddTorque(Vector3.back * rotacion * fuerzaRotacion);
+        float rotacion = Input.GetAxis("Horizontal2");
+        rb.AddTorque(Vector3.right * rotacion * fuerzaRotacion);
     }
 }

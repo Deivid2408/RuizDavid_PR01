@@ -3,7 +3,7 @@ using UnityEngine;
 public class RotarPlataforma : MonoBehaviour
 {
     // Qué tan fuerte gira la plataforma
-    public float fuerzaRotacion = 1f;   
+    public float fuerzaRotacion = 1f;
 
     private Rigidbody rb;
 
@@ -11,13 +11,13 @@ public class RotarPlataforma : MonoBehaviour
     {
 
         // Obtenemos el Rigidbody de la plataforma
-        rb = GetComponent<Rigidbody>();  
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
     {
 
-       Movimiento();
+        Movimiento();
     }
 
     public void Movimiento()
@@ -33,9 +33,9 @@ public class RotarPlataforma : MonoBehaviour
         Vector3 push = new Vector3(horizontalIzq, 0, verticalDer);
 
         //Rotación con joystick izquierdo
-        rb.AddTorque(push * horizontalIzq * fuerzaRotacion);
+        rb.AddTorque(Vector3.back * horizontalIzq * fuerzaRotacion);
 
         //Rotación con joystick derecho
-        rb.AddTorque(push * verticalDer * fuerzaRotacion);
+        rb.AddTorque(Vector3.left * verticalDer * fuerzaRotacion);
     }
 }
