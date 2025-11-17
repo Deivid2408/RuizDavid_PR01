@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Meta : MonoBehaviour
+public class CambiadorEscenas : MonoBehaviour
 {
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -9,9 +10,13 @@ public class Meta : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CargarEscene(int escena)
     {
-        
+        SceneManager.LoadScene(escena);
     }
+
+  
+
+
+    
 }
